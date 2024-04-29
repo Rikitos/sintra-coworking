@@ -1,0 +1,13 @@
+.header__container {
+  background: #999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header__container__navigation-list > li {
+  list-style: none;
+}/*# sourceMappingURL=style.css.map */

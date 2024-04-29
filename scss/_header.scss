@@ -1,0 +1,15 @@
+.header__container {
+    background: #999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    justify-content: space-between;
+    &__navigation {
+        &-list {
+            &>li {
+                list-style: none;
+            }
+        }
+    }
+}
