@@ -14,4 +14,3 @@ add_action('init', 'custom_new_menu');
 
 add_filter('show_admin_bar', '__return_false');
 ?>
-

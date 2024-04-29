@@ -6,24 +6,21 @@
     <?php wp_head(); ?>
 </head>
 <body>
-  <header class="header">
-    <div class="header__container">
-      <div class="header__container__logo">
-
+  <div class="main-wrapper">
+      <div class="header__container">
+        <div class="header__container__logo">
+          <img src="<?php bloginfo('template_url')?>/assets/img/coworking-sintra-logo.svg" alt="" class="header__container__logo-img">
+        </div>
+        <!-- <div class="header__container__navigation"> -->
+          <?php 
+          wp_nav_menu(
+            array(
+              'theme_location' => 'headerMainMenu',
+              'menu_class' => 'header__container__navigation-list',
+              'container_class' => 'header__container__navigation',
+              'menu_id' => 'nav-top'
+            )
+          );
+          ?>
+        <!-- </div> -->
       </div>
-      <!-- <div class="header__container__navigation"> -->
-        <?php 
-        wp_nav_menu(
-          array(
-            'theme_location' => 'headerMainMenu',
-            'menu_class' => 'header__container__navigation-list',
-            'container_class' => 'header__container__navigation',
-            'menu_id' => 'nav-top'
-          )
-        );
-        ?>
-      <!-- </div> -->
-    </div>
-  </header>
-
-    
