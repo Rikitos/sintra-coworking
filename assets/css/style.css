@@ -1,12 +1,18 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
 }
 
 .main-wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .header {
@@ -19,26 +25,84 @@
   left: 0;
   right: 0;
   top: 0;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
 }
-.header__container__logo {
-  width: 250px;
+.header__container .header__navigation {
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.header__container__navigation {
-  width: 65%;
+.header__container .header__navigation__logo {
+  margin: 15px 15px;
+  width: 225px;
+}
+.header__container .header__navigation__menu {
+  margin-top: 30px;
+  height: 0;
   margin-left: auto;
 }
-.header__container__navigation-list {
+.header__container .header__navigation__menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  display: block;
+  font-size: 2rem;
 }
-.header__container__navigation-list > li {
+.header__container .header__navigation__menu-list > li {
   list-style: none;
-  flex-grow: 1;
+  padding: 10px 15px;
 }
-.header__container__navigation-list > li > a {
+.header__container .header__navigation__menu-list > li > a {
   text-decoration: none;
   color: black;
 }
-.header__container__navigation-list > li > a:hover {
+.header__container .header__navigation__menu-list > li > a:hover {
   color: orange;
+}
+
+.header__hamburger {
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  display: block;
+}
+
+.hamburger {
+  height: 3px;
+  width: 30px;
+  background-color: black;
+  margin-bottom: 4px;
+  -webkit-transition: 0.25s linear;
+  transition: 0.25s linear;
+}
+
+.hero {
+  margin: 100px 15px 0;
+  font-size: 1.6rem;
+}
+.hero__address {
+  font-family: "Open Sans", Sans-serif;
+  color: #FF6200;
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+}
+.hero__address > i {
+  margin-right: 10px;
+}
+.hero__title {
+  line-height: 1.5em;
+  margin-bottom: 21px;
+}
+.hero__img {
+  overflow: hidden;
+}
+.hero__img-img {
+  width: 100%;
+}
+
+.section {
+  margin: 50px 15px 0;
+  font-size: 1.6rem;
 }/*# sourceMappingURL=style.css.map */

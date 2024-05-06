@@ -8,37 +8,44 @@ if (have_posts()) {
     the_content();
   }
 } ?>
-    <div class="header">
-        <h3 class="header__address">
-            <?php the_field('header_address'); ?>
+    <div class="hero">
+        <h3 class="hero__address">
+            <i class="fa-solid fa-location-dot"></i> <?php the_field('hero_address'); ?>
         </h3>
-        <h2 class="header__title">
-            <?php the_field('header_title'); ?>
+        <h2 class="hero__title">
+            <?php the_field('hero_title'); ?>
         </h2>
-        <p class="header__text">
-            <?php the_field('header_text'); ?>
+        <p class="hero__text">
+            <?php the_field('hero_text'); ?>
         </p>
-        <button class="header__btn">
-            <?php the_field('header_btn'); ?>
+        <button class="hero__btn">
+            <?php the_field('hero_btn'); ?>
         </button>
-        <div class="header__img">
-            <?php the_field('header_img'); ?>
+        <div class="hero__img">
+            <!-- <?php echo print_r(get_field('hero_img')['sizes']) ?> -->
+            <img src="<?php echo esc_url(get_field('hero_img')['url']) ?>" alt="" class="hero__img-img">
         </div>
     </div>
 
-    <section class="section-1">
-        <h2 class="section-1__title">
-            <?php the_field('section_1_title'); ?>
-        </h2>
-        <p class="section-1__text">
-            <?php the_field('section_1_text'); ?>
-        </p>
-        <button class="section-1__btn">
-            <?php the_field('section_1_btn'); ?>
-        </button>
+    <section class="section section-1">
+        <div class="section-1__container">
+            <h2 class="section-1__container__title">
+                <?php the_field('section_1_title'); ?>
+            </h2>
+            <p class="section-1__container__text">
+                <?php the_field('section_1_text'); ?>
+            </p>
+            <button class="section-1__container__btn">
+                <?php the_field('section_1_btn'); ?>
+            </button>
+        </div>
+        <div class="section-1__img">
+            <img src="<?php echo esc_url(get_field('section_1_img')['url']) ?>" alt="" class="section-1__img-img">
+        </div>
+
     </section>
 
-    <section class="section-2">
+    <section class="section section-2">
         <h2 class="section-2__title">
             <?php the_field('section_2_title') ?>
         </h2>
@@ -47,7 +54,7 @@ if (have_posts()) {
         </p>
     </section>
 
-    <section class="section-3">
+    <section class="section section-3">
         <?php
         if ( have_rows('section_3')) : ?>
             <h2 class="section-3__title">
@@ -64,7 +71,7 @@ if (have_posts()) {
         endif;?>
     </section>
 
-    <section class="section-4">
+    <section class="section section-4">
         <?php
         if ( have_rows('section_4')) :
             while( have_rows('section_4')) : the_row(); ?>
@@ -84,7 +91,7 @@ if (have_posts()) {
         endif;?>
     </section>
 
-    <section class="section-5">
+    <section class="section section-5">
         <h3 class="section-5__title">
             <?php the_field('section_5__title');?>
         </h3>
@@ -93,7 +100,7 @@ if (have_posts()) {
         </div>
     </section>
 
-    <section class="section-6">
+    <section class="section section-6">
         <?php echo get_sub_field('section_6_title');
         if(have_rows('section_6')) :
             while(have_rows('section_6')) : the_row(); ?>
@@ -108,7 +115,7 @@ if (have_posts()) {
         endif ?>
     </section>
 
-    <section class="section-7">
+    <section class="section section-7">
         <h2 class="section-7__title">
             <?php the_field('section_7_title'); ?>
         </h2> <?php
@@ -121,7 +128,7 @@ if (have_posts()) {
         endif ?>
     </section>
 
-    <section class="section-8">
+    <section class="section section-8">
         <?php
         if(have_rows('section_8')) :
             while(have_rows('section_8')) : the_row(); ?>
@@ -139,7 +146,7 @@ if (have_posts()) {
         endif ?>
     </section>
 
-    <section class="section-9">
+    <section class="section section-9">
         <h3 class="section-9__title">
             <?php the_field('section_9_title'); ?>
         </h3>
@@ -148,7 +155,7 @@ if (have_posts()) {
         </p>
     </section>
 
-    <section class="section-10">
+    <section class="section section-10">
     <?php
         if(have_rows('section_10')) :
             while(have_rows('section_10')) : the_row(); ?>
@@ -166,7 +173,7 @@ if (have_posts()) {
         endif ?>
     </section>
 
-    <section class="section-11">
+    <section class="section section-11">
         <?php
         if(have_rows('section_10')) :
             while(have_rows('section_10')) : the_row(); ?>

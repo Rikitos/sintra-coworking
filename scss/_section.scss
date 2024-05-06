@@ -1,0 +1,28 @@
+.hero {
+    margin: 100px 15px 0;
+    font-size: 1.6rem;
+    &__address {
+        font-family: "Open Sans", Sans-serif;
+        color: #FF6200;
+        margin-bottom: 16px;
+        font-size: 1.6rem;
+        &>i {
+            margin-right: 10px;
+        }
+    }
+    &__title {
+        line-height: 1.5em;
+        margin-bottom: 21px;
+    }
+    &__img {
+        overflow: hidden;
+        &-img {
+            width: 100%;
+        }
+    }
+}
+
+.section {
+    margin: 50px 15px 0;
+    font-size: 1.6rem;
+}

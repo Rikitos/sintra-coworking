@@ -1,5 +1,6 @@
 <?php
 function site_files() {
+	wp_enqueue_script('font-awesome', ('https://kit.fontawesome.com/574fabade3.js'));
     wp_enqueue_style('main_styles', get_theme_file_uri('/assets/css/style.css'));
 }
 add_action('wp_enqueue_scripts', 'site_files', 999);
