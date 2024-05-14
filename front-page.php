@@ -130,23 +130,75 @@ if (have_posts()) {
         <div class="section-6__bg"></div>
     </section>
 
-    <section class="section section-7">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.swiper', {
+
+    // Optional parameters
+    direction: 'horizontal',
+    slidesPerView: 2,
+    spaceBetween: 15,
+    // loop: false,
+    grid: {
+        rows: 2,
+    },
+    // rows: 2,
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
+    // loopedSlides: 1,
+
+    // If we need pagination
+    // pagination: {
+    //   el: '.swiper-pagination',
+    // },
+    });
+
+    });
+    </script>
+
+    <div class="swiper section section-7">
         <h2 class="section-7__title">
             <?php the_field('section_7_title'); ?>
-        </h2> <?php
-        if(have_rows('section_7')) :
-            while(have_rows('section_7')) : the_row(); ?>
-            <div class="section-7__container">
-                <div class="section-7__img">
-                    <img src="<?php echo esc_url(get_sub_field('section_7_img')['url']) ?>" alt="" class="section-7__img-img">
-                </div>
-                <p class="section-7__text">
-                    <?php echo get_sub_field('section_7_text');?>
-                </p>
-            </div>
-        <?php endwhile; 
-        endif ?>
-    </section>
+        </h2>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <!-- <?php $slides = get_field('section_7'); ?> -->
+
+            <!-- <div class="swiper-slide"> -->
+            <?php 
+                if ( have_rows('section_7')): 
+                while( have_rows('section_7') ) : the_row(); ?>
+                    <div class="swiper-slide section-7__container">
+                        <?php 
+                        // echo print_r(get_sub_field('slider_img')); 
+                        ?>
+                        <div class="section-7__img">
+                            <img src="<?php echo get_sub_field('section_7_img')['sizes']['medium']; ?>" alt="" class="section-7__img-img">
+                        </div>
+                        <p class="section-7__text">
+                            <?php echo get_sub_field('section_7_text');?>
+                        </p>
+                    </div> 
+                <?php
+                endwhile;
+            endif;
+            ?>
+            <!-- </div> -->
+        </div>
+        <!-- If we need pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
 
     <section class="section section-8">
         <?php
@@ -209,7 +261,34 @@ if (have_posts()) {
             <?php endwhile; 
         endif ?>
     </section>
-</div>
+
+    <section class="section section-12">
+            <div class="section-12__title-container">
+                <div class="section-12__title">
+                    Szukasz pracy w IT i marketingu?
+                </div>
+                <div class="section-12__text-1">
+                    Dołącz do naszego zespołu Sintra Poland
+                </div>
+            </div>
+            <div class="section-12__text-container">
+                <div class="section-12__text-2">
+                    Zobacz ofert na:
+                </div>
+                <div class="section-12__btn-1">
+                <img src="<?php echo get_theme_file_uri('/assets/img/justjoinit.png'); ?>" alt="">
+                </div>
+                <div class="section-12__text-3">
+                    lub
+                </div>
+                <div class="section-12__btn-2">
+                    <img src="<?php echo get_theme_file_uri('/assets/img/rocketjobs.png'); ?>" alt=""> <span>RocketJobs</span>
+                </div>
+                <div class="section-12__img">
+                    <img src="<?php echo get_theme_file_uri('/assets/img/megaphone.png'); ?>" alt="" class="section-12__img-img">
+                </div>
+            </div>
+    </section>
 <?php
 get_footer();
 ?>

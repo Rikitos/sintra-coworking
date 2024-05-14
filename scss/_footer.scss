@@ -1,0 +1,113 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 30px 45px;
+    &__contact {
+        &__logo {
+            width: 200px;
+            margin: 15px 0;
+        }
+        &-info {
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 3rem;
+            & i {
+                width: 15px;
+                color: $darker-background-color;
+                margin-right: 10px;
+            }
+        }
+    }
+    &__navigation {
+        &__socials {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: 20px;
+            &-FB {
+                text-align: center;
+                line-height: 48px;
+                height: 50px;
+                width: 50px;
+                font-size: 2rem;
+                border: 1px #EAEAEA solid;
+                border-radius: 50%;
+                &:hover {
+                    color: $darker-background-color;
+                }
+            }
+            &-IG {
+                text-align: center;
+                line-height: 48px;
+                height: 50px;
+                width: 50px;
+                font-size: 2rem;
+                border: 1px #EAEAEA solid;
+                border-radius: 50%;
+                &:hover {
+                    color: $darker-background-color;
+                }
+            }
+        }
+        &__menu {
+            &-list {
+                font-size: 1.4rem;
+                &>li:nth-child(1) {
+                    &>a {
+                        font-weight: 700;
+                    }
+                }
+                &>li {
+                    list-style: none;
+                    &>a {
+                        display: inline-block;
+                        text-decoration: none;
+                        color: #666;
+                        line-height: 30px;
+                    }
+                }
+                &>li:nth-child(4) { 
+                    font-size: 1.2rem;
+                    margin-top: 40px;
+                    &>a {
+                        color: #1A171B;
+                        font-weight: 100;
+                        &:hover {
+                            color: $darker-background-color; 
+                        }
+                    }
+                }
+                &>li:nth-child(5) {
+                    font-size: 1.2rem;
+                    &>a {
+                        color: #1A171B;
+                        font-weight: 100;
+                        &:hover {
+                            color: $darker-background-color; 
+                        }
+                    }
+                }
+                &>li:nth-child(6) {
+                    font-size: 1.2rem;
+                    &>a {
+                        color: #1A171B;
+                        font-weight: 100;
+                        &:hover {
+                            color: $darker-background-color; 
+                        }
+                    }
+                }
+            }
+        }
+        &__list-copyright {
+            color: #1A171B;
+            font-size: 1.2rem;
+            line-height: 34px;
+            font-weight: 100;
+        }
+        & a:hover {
+            color: $darker-background-color;
+        }
+    }
+}
