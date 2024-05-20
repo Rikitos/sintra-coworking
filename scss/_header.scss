@@ -8,12 +8,18 @@ html {
     font-size: 10px;
     font-family: "Open Sans", Sans-serif;
     color: $main-color;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .main-wrapper {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
-    overflow: hidden;
 }
 
 .header {
