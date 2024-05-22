@@ -1,0 +1,101 @@
+.rules {
+    margin-top: 100px;
+    padding: 10px 20px;
+    min-height: 60vh;
+    &__title-container {
+        position: relative;
+        margin-top: 350px;
+        background-color: #fff;
+        border-radius: 25px 25px 0 0;
+        @media (min-width: 789px) {
+            margin-top: 250px;
+        }
+        & .elementor-divider {
+            position: absolute;
+            z-index: -1;
+            width: 130%;
+            top: -350px;
+            left: -10%;
+            border-top: 600px solid #EC5128;
+            @media (min-width: 789px) {
+                top: -250px;
+            }
+        }
+        &__title {
+            color: white;
+            font-size: 5rem;
+            line-height: 6rem;
+            font-weight: 900;
+            padding-left: 5px;
+            position: absolute;
+            top: -275px;
+            @media (min-width: 789px) {
+                top: -175px;
+            }
+        }
+        &__text {
+            padding: 35px 35px 20px;
+            font-size: 1.6rem;
+            line-height: 3.5rem;
+            &>p {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__text-container {
+        padding: 20px 30px 35px;
+        background-color: #fff;
+        @media (min-width: 578px) {
+            padding: 20px 40px 35px;
+        }
+        & li {
+            list-style-position: inside;
+            font-size: 1.6rem;
+            line-height: 2em;
+            padding-left: 20px;
+            font-weight: 500;
+        }
+        & ul>li {
+            list-style-type: disc;
+            &::marker {
+                font-size: 2.4rem;
+                line-height: 4.8rem;
+            }
+        }
+        & ol>li {
+            padding-bottom: 20px;
+            padding-left: 20px;
+        }
+        & .elementor-divider {
+            margin-top: 30px;
+        }
+        & ul,ol {
+            margin-top: 10px;
+        }
+        &__title {
+            font-size: 2.8rem !important;
+            line-height: 4.2rem !important;
+            font-weight: 900 !important;
+            // list-style-position: outside !important;
+            padding-left: 0 !important;
+        }
+        &__list-ol__list-ol-text, &__list-ol__list-ul-text, &__list-ul__list-ol-text, &__list-ul__list-ul-text {
+            padding-left: 35px;
+            & li {
+                padding-left: 35px;
+            }
+        }
+    }
+    & .section-10 {
+        padding: 0;
+        border-radius: 25px;
+        margin-bottom: 50px;
+        &__img {
+            position: relative;
+            left: -5%;
+            width: 110%;
+            padding-right: calc(5% + 30px);
+            padding-left: calc(5% + 30px);
+        }
+    }
+}

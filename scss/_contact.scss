@@ -1,0 +1,194 @@
+.contact {
+    margin: 100px 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.8rem;
+    &__container {
+        padding: 20px 40px;
+        flex-basis: 90%;
+        @media (min-width: 789px) {
+            flex-basis: 43%;
+        }
+        &__title {
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 6rem;
+            margin-bottom: 40px;
+        }
+        &__text {
+            font-size: 2.4rem;
+            line-height: 3rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+        &__address {
+            line-height: 3rem;
+            margin-bottom: 40px;
+        }
+        &__email {
+            margin-bottom: 40px;
+        }
+        &__socials {
+            display: flex;
+            gap: 30px;
+            &-FB {
+                text-align: center;
+                line-height: 48px;
+                height: 50px;
+                width: 50px;
+                font-size: 2rem;
+                border: 1px #EAEAEA solid;
+                border-radius: 50%;
+                &:hover {
+                    cursor: pointer;
+                    color: $darker-background-color;
+                }
+            }
+            &-IG {
+                text-align: center;
+                line-height: 48px;
+                height: 50px;
+                width: 50px;
+                font-size: 2rem;
+                border: 1px #EAEAEA solid;
+                border-radius: 50%;
+                &:hover {
+                    cursor: pointer;
+                    color: $darker-background-color;
+                }
+            }
+        }
+
+    }
+    &__form {
+        padding: 20px 50px;
+        flex-grow: 1;
+        @media (min-width: 789px) {
+            flex-basis: 53%;
+        }
+        & form.wpcf7-form {
+            @media (min-width: 789px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;;
+            }
+            &>p:nth-child(2) {
+                margin-bottom: 15px;
+                @media (min-width: 789px) {
+                    flex-basis: 90%;
+                    flex-grow: 1;
+                }
+            }
+            &>p:nth-child(3) {
+                flex-basis: 45%;
+            }
+            &>p:nth-child(4) {
+                flex-basis: 45%;
+            }
+            &>p:nth-child(5) {
+                flex-basis: 45%;
+            }
+            &>p:nth-child(6) {
+                flex-basis: 45%;
+            }
+            &>p:nth-child(7) {
+                flex-basis: 45%;
+                margin-top: 15px;
+                margin-left: auto;
+            }
+        }
+        &__title {
+            font-size: 2.4rem;
+            line-height: 3rem;
+            font-weight: 900;
+            margin-bottom: 40px;
+            &:has(> p) {
+                background-color: blue;
+            }
+        }
+        &__name {
+            &-label {
+                font-weight: 900;
+            }
+            &-text {
+                border: 1px solid #C4C4C4;
+                border-radius: 12px;
+                padding: 10px 15px;
+                height: 50px;
+                margin: 10px 0;
+                width: 100%;
+            }
+        }
+        &__email {
+            &-label {
+                font-weight: 900;
+            }
+            &-text {
+                border: 1px solid #C4C4C4;
+                border-radius: 12px;
+                padding: 10px 15px;
+                height: 50px;
+                margin: 10px 0;
+                width: 100%;
+            }
+        }
+        &__phone {
+            &-label {
+                font-weight: 900;
+            }
+            &-text {
+                border: 1px solid #C4C4C4;
+                border-radius: 12px;
+                padding: 10px 15px;
+                height: 50px;
+                margin: 10px 0;
+                width: 100%;
+            }
+        }
+        &__message {
+            &-label {
+                font-weight: 900;
+            }
+            &-text {
+                border: 1px solid #C4C4C4;
+                border-radius: 12px;
+                padding: 10px 15px;
+                margin: 10px 0;
+                width: 100%;
+            }
+        }
+        &__submit {
+            height: 50px;
+            border-radius: 12px;
+            background-color: #EC5128;
+            color: #fff;
+            width: 100%;
+            text-transform: uppercase;
+            margin: 0px;
+            font-weight: bold;
+            border: 0;
+            transition: 0.3s ease-out;
+            margin-bottom: 20px;
+            @media (min-width: 789px) {
+                padding: 0 20px;
+            }
+            &:hover {
+                background-color: black;
+            }
+        }
+        &__checkbox {
+            text-align: center;
+            @media (min-width: 789px) {
+                flex-basis: 90%;
+                flex-grow: 1;
+                &>p {
+                    width: 50%;
+                    margin-left: auto;
+                }
+            }
+            &-text {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

@@ -563,10 +563,11 @@
 .section-10 {
     position: relative;
     overflow: hidden;
-    padding: 30px 20px;
+    // padding: 0;
+    border-radius: 25px;
     color: white;
     @media (min-width: 789px) {
-        padding: 55px 50px;
+        // padding: 55px 50px;
     }
     &__title {
         position: relative;
@@ -610,9 +611,14 @@
         background-size: cover;
         background-position: right; 
         border-radius: 25px;
-        padding: 30px 20px;
+        padding: 30px calc(5% + 30px);
+        position: relative;
+        left: -5%;
+        width: 110%;
+        // padding-right: calc(5% + 30px);
+        // padding-left: calc(5% + 30px);
         @media (min-width: 789px) {
-            padding: 40px 30px;
+            padding: 40px calc(5% + 30px);
         }
         // position: absolute;
         // width: 150%;
